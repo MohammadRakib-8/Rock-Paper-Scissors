@@ -22,6 +22,4 @@ else{
     currentMode="Dark";
 
 }
-
-
 });

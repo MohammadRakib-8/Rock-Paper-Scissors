@@ -2,6 +2,8 @@ let modeChangeButton=document.querySelector("#modeChangeButton");
 let body=document.querySelector("body");
 let choices=document.querySelector(".choices");
 let choiceRPS=document.querySelectorAll(".choice");
+let msg=document.querySelector("#msg");
+
 
 let currentMode="Light";
 
@@ -38,7 +40,7 @@ const genCompChoice= () => {
 let optionC=["rock","paper","scissors"];
 const randomID=Math.floor(Math.random()*3);
 return optionC[randomID];
-}
+};
     
 const printGameCalculation=(userChoice)=>{
         let compChoice= genCompChoice();
@@ -46,32 +48,43 @@ const printGameCalculation=(userChoice)=>{
         console.log("Computer Choice = ",compChoice);
 
         if(compChoice==userChoice){
-console.log("Game Draw");
+           drawGame();
 
         }
         else{
             let userWin =true;
             if(userChoice=="rock"){
-                userWin=compChoice=="scissors"?true:false;
-            }
+                userWin=compChoice=="scissors"?true:false;}
+            
             else if(userChoice=="paper"){
                 userWin=compChoice=="rock"?true:false;
             }
             else if(userChoice=="scissors"){
                 userWin=compChoice=="rock"?false:true;
             }
-                printWinnner(userWin);
-        }}
+                printWinnner(userWin,userChoice,compChoice);
+        }};
 
-
-        const printWinnner=(userWin)=>{
+drawGame=()=>{
+    console.log("Game Draw .");
+    msg.innerText="Game Draw";
+    msg.style.backgroundColor="orange";
+};
+        
+        const printWinnner=(userWin,userChoice,compChoice)=>{
 
             if(userWin==true){
                 console.log("You Win ! ");
+                msg.innerText=`You Win ! Your ${userChoice} beats ${compChoice}`;
+                msg.style.backgroundColor="green";
+                msg.style.color
+
             }
             else{
                 console.log("Computer Win ! ");
-            }}
+                msg.innerText=`You lost.  ${compChoice} beats your ${userChoice}`;
+                msg.style.backgroundColor="red";
+            }};
     
 
    

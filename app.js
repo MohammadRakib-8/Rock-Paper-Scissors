@@ -3,6 +3,12 @@ let body=document.querySelector("body");
 let choices=document.querySelector(".choices");
 let choiceRPS=document.querySelectorAll(".choice");
 let msg=document.querySelector("#msg");
+let compScore=0;
+let userScore=0;
+let compScoreDisplay=document.querySelector("#user-score");
+let userScoreDisplay=document.querySelector("#comp-score");
+
+
 
 
 let currentMode="Light";
@@ -67,23 +73,28 @@ const printGameCalculation=(userChoice)=>{
 
 drawGame=()=>{
     console.log("Game Draw .");
-    msg.innerText="Game Draw";
-    msg.style.backgroundColor="orange";
+    msg.innerText="Game Draw.";
+    msg.style.backgroundColor="#FFDA76";
 };
         
         const printWinnner=(userWin,userChoice,compChoice)=>{
 
             if(userWin==true){
+                userScore++;
                 console.log("You Win ! ");
                 msg.innerText=`You Win ! Your ${userChoice} beats ${compChoice}`;
                 msg.style.backgroundColor="green";
-                msg.style.color
+                userScoreDisplay.innerText=userScore;
+                
+
 
             }
             else{
+                compScore++;
                 console.log("Computer Win ! ");
-                msg.innerText=`You lost.  ${compChoice} beats your ${userChoice}`;
+                msg.innerText=`You lost.${compChoice} beats your ${userChoice}`;
                 msg.style.backgroundColor="red";
+                compScoreDisplay.innerText=compScore;
             }};
     
 

@@ -10,7 +10,6 @@ h1{
     line-height: 4rem;
 
 }
-
 .choice
 {
     height: 200px;
@@ -59,14 +58,12 @@ gap: 3rem;
     font-size: 5rem;
    
 }
-
 .msg-container{
     margin-top:5rem;
    
 }
-
 #msg{
-    background-color: rgb(12, 12, 12);
+    background-color:rgb(176, 139, 14);
     color:white;
     font-size: 18px;
     display:inline;
@@ -75,7 +72,6 @@ gap: 3rem;
     border-radius: 1rem;
 }
 #modeChangeButton{
-
     height:50px;
     width:120px;
     border:none;

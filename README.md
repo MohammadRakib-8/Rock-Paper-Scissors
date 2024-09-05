@@ -21,5 +21,6 @@ With no need for external libraries or complex setups, this game runs directly i
 
 ![Screenshot (78)](https://github.com/user-attachments/assets/0aecfa3c-dc77-4c60-a758-84c5cb6a4f0c)
 
-![Screenshot (80)](https://github.com/user-attachments/assets/5ec7107f-cbc5-4344-a87c-570eaa6cdc10)
+![Screenshot (80)](https://github.com/user-attachments/assets/c4374098-ae31-4f4e-b288-a0c5557bb7a6)
+
 
